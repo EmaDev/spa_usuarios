@@ -1,5 +1,4 @@
-import { FaLinkedin, FaGithub, FaInstagramSquare } from "react-icons/fa";
-import { Link } from "@nextui-org/react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 export const Footer = () => {
 
     const calcularFecha = (): string => {

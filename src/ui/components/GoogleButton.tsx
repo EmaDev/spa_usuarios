@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
 import { Button } from '@nextui-org/button';
 import { signInWithGoogleAccount } from '../../api/firebase/auth';
 import { useAuthStore } from '../../store/authStore';
 
 export const GoogleButton = () => {
 
-    const [isLoading, setIsLoading] = useState<boolean>(false);
     const login = useAuthStore((store) => store.login);
-
 
     const handleGoogleLogin = async () => {
         const resp = await signInWithGoogleAccount();

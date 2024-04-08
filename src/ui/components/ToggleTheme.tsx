@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useTheme } from '../hooks/useTheme'
 import { Switch } from '@nextui-org/react';
 import { MoonIcon } from '../icons/MoonIcon';

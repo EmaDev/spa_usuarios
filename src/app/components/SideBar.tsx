@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ToggleTheme } from '../../ui/components/ToggleTheme'
 import { NavLink } from 'react-router-dom'
-import { Separator } from '../../ui/components/Separator'
 import { ArrowIcon } from '../../ui/icons/ArrowIcon'
 import { GradientButton } from '../../ui/components/GradientButton'
 import { useAuthStore } from '../../store/authStore'

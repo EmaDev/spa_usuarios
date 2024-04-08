@@ -32,7 +32,7 @@ export const AvatarEditorModal = ({ isOpen, onOpenChange, onOpen}: Props) => {
     }, []);
 
     const handleUpdteAvatar = async() => {
-        const {ok, msg, data} = await updateUser({
+        const {ok, msg} = await updateUser({
             ...user,
             foto: activeImage
         } as Usuario);

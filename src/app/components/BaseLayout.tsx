@@ -1,4 +1,3 @@
-import { Footer } from './Footer'
 import { SideBar } from './SideBar'
 
 interface Props {
