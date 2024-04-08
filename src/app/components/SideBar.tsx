@@ -20,38 +20,32 @@ export const SideBar = () => {
             `}>
             <ul className='p-4 w-full h-full pt-24 text-white'>
                 <ToggleTheme />
-                <li className='w-full text-2xl font-bold my-4 
-                '>
+                <br />
+                <li className='mt-4 p-2 text-2xl font-bold border-b border-[rgba(0,0,0,0.2)] shadow-lg'>
                     <NavLink
-                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-[rgba(255,255,255,0.5)]"}
+                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-[rgba(255,255,255,0.3)]"}
                         to="/"
                     >
                         Inicio
                     </NavLink>
-                    <Separator className='mt-4' />
                 </li>
-                <li className='w-full text-2xl font-bold my-4
-                '>
+                <li className='mt-4 p-2 text-2xl font-bold border-b border-[rgba(0,0,0,0.2)] shadow-lg'>
                     <NavLink
-                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-[rgba(255,255,255,0.5)]"}
+                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-[rgba(255,255,255,0.3)]"}
                         to="/admin"
                     >
-                        Administracion
+                        Admin
                     </NavLink>
-                    <Separator className='mt-4' />
                 </li>
-                <li className='w-full text-2xl font-bold my-4
-                '>
+                <li className='mt-4 p-2 text-2xl font-bold border-b border-[rgba(0,0,0,0.2)] shadow-lg'>
                     <NavLink
-                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-[rgba(255,255,255,0.5)]"}
+                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-[rgba(255,255,255,0.3)]"}
                         to="/perfil"
                     >
                         Perfil
                     </NavLink>
-                    <Separator className='mt-4' />
                 </li>
-
-                <li>
+                <li className='mt-12'>
                     <GradientButton onClick={logout} text='Cerrar sesion' />
                 </li>
             </ul>

@@ -21,9 +21,9 @@
     --color-secondary: #f5f5f5;
     --color-accent: #3f84ff;
     --color-border: #C5C3C4;
-    --color-hover: #3272e5;
+    --color-hover: #3f84ff80;
     --color-text: #1e1e1e;
-    --color-text-secondary: #333333;
+    --color-text-secondary: #4d4d4d;
 
     --color-success: rgb(0 200 81);
     --color-info: rgb(51 181 229);
@@ -36,9 +36,9 @@
     --color-secondary: #2d2d2d;
     --color-accent: #3f84ff;
     --color-border: #343F54;
-    --color-hover: #485265;
+    --color-hover: #3f84ff80;
     --color-text: #ffffff;
-    --color-text-secondary: #e1e1e1;
+    --color-text-secondary: #b3b3b3;
 
     --color-success: rgb(0 200 81);
     --color-info: rgb(51 181 229);

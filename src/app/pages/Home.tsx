@@ -22,20 +22,21 @@ export const Home = () => {
   return (
     <>
       <Header />
-      <div className='w-3/4 m-auto flex flex-row justify-center gap-6 mb-6'>
-        <div className='h-36 w-72 bg-secondary rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
+      <div className='md:w-3/4 m-auto flex flex-col md:flex-row justify-center gap-6 mb-6'>
+        <div className='h-16 md:w-48 bg-hover rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
           <p className='text-2xl text-white text-center font-bold'>Prepaga</p>
         </div>
-
-        <div className='h-36 w-72 bg-secondary rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
-          <p className='text-2xl text-white text-center font-bold'>Prepaga</p>
+        <div className='h-16 md:w-48 bg-hover rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
+          <p className='text-2xl text-white text-center font-bold'>ART</p>
         </div>
-
-        <div className='h-36 w-72 bg-secondary rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
-          <p className='text-2xl text-white text-center font-bold'>Prepaga</p>
+        <div className='h-16 md:w-48 bg-hover rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
+          <p className='text-2xl text-white text-center font-bold'>Asistencia</p>
+        </div>
+        <div className='h-16 md:w-48 bg-hover rounded-xl shadow-xl hover:bg-accent transtion-all duration-300 cursor-pointer flex items-center justify-center'>
+          <p className='text-2xl text-white text-center font-bold'>Trasporte</p>
         </div>
       </div>
-      {isLaoding ? <Loading /> : <UsersTable usuarios={userList} columsKeys={["Nombre", "Rol"]} rowsPerPage={6} refreshTable={intialLoad} />}
+      {isLaoding ? <Loading /> : <UsersTable usuarios={userList} columsKeys={["Nombre", "Email", "Rol"]} rowsPerPage={6} refreshTable={intialLoad} />}
     </>
 
   )

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { useAuthStore } from '../../store/authStore';
 import { Separator } from '../../ui/components/Separator'
 
@@ -14,11 +15,37 @@ export const Header = () => {
                 </div>
                 <div>
                     <div className='w-16 h-16 rounded-full bg-primary shadow-lg border-4 border-secondary'>
-                        <img alt="avatar" src={user?.foto} className='w-full h-full rounded-full'/>
+                        <img alt="avatar" src={user?.foto} className='w-full h-full rounded-full' />
                     </div>
                 </div>
             </header>
-            <Separator className='my-10'/>
+            <Separator className='mt-10 md:mb-4' />
+            <ul className='flex md:hidden gap-4 mb-6'>
+                <li>
+                    <NavLink
+                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-textSecondary"}
+                        to="/"
+                    >
+                        Inicio
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-textSecondary"}
+                        to="/admin"
+                    >
+                        Admin
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        className={({ isActive }) => isActive ? "text-textPrimary" : "text-textSecondary"}
+                        to="/perfil"
+                    >
+                        perfil
+                    </NavLink>
+                </li>
+            </ul>
         </>
     )
 }

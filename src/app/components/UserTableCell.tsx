@@ -20,13 +20,13 @@ interface Props {
 export const UserTableCell = ({ user, columKey, openModal, refreshTable }: Props) => {
 
     const getRol = useAuthStore((store) => store.getRol);
-    const {showAlert} = useAlert();
+    const { showAlert } = useAlert();
 
-    const handleDeleteUser = async() => {
-        const {ok, msg} = await deleteUser(user.uid);
+    const handleDeleteUser = async () => {
+        const { ok, msg } = await deleteUser(user.uid);
 
-        if(ok){
-            showAlert("Usuario eliminado", msg, 'success', refreshTable )
+        if (ok) {
+            showAlert("Usuario eliminado", msg, 'success', refreshTable)
         }
     }
 
@@ -36,12 +36,16 @@ export const UserTableCell = ({ user, columKey, openModal, refreshTable }: Props
                 return (
                     <div className='flex items-center gap-4'>
                         <div className='h-10 w-10 rounded-full bg-primary shadow'>
-                            <img 
-                            className='h-full w-full rounded-full'
-                            alt={user.nombre + user.apellido} src={user.foto ? user.foto : avatar} />
+                            <img
+                                className='h-full w-full rounded-full'
+                                alt={user.nombre + user.apellido} src={user.foto ? user.foto : avatar} />
                         </div>
                         <span>{`${user.nombre} ${user.apellido}`}</span>
                     </div>
+                );
+            case "Email":
+                return (
+                    <span>{user.email}</span>
                 );
             case "Rol":
                 return (
@@ -65,7 +69,7 @@ export const UserTableCell = ({ user, columKey, openModal, refreshTable }: Props
                                 </Tooltip>
                                 <Tooltip color="danger" content="Eliminar Usuario">
                                     <span className="text-lg text-danger cursor-pointer active:opacity-50">
-                                        <DeleteIcon onClick={handleDeleteUser}/>
+                                        <DeleteIcon onClick={handleDeleteUser} />
 
                                     </span>
                                 </Tooltip>

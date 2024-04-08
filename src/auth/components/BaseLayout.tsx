@@ -12,7 +12,7 @@ export const BaseLayout = ({ children }: Props) => {
                         <div className="w-full h-auto bg-accent hidden lg:block lg:w-5/12 bg-cover rounded-l-lg p-6 
                         ">
                             <ToggleTheme />
-                            <div className="flex items-center justify-center h-[80%]">
+                            <div className="flex items-center justify-center h-[80%] w-3/4 m-auto">
                                 <img src={logo}/>
                             </div>
                         </div>
